@@ -1,0 +1,18 @@
+<div class="container">
+<h2>Course List</h2>
+<input class="form-control" [(ngModel)]="courseTitle"/>
+<button class="btn btn-outline-secondary" (click)="addCourse(courseTitle)">
+  Create Course
+</button>
+<ul class="list-group" >
+  <li class= "list-group-item webdev" *ngFor="let course of courses">
+    <fa-icon [icon]="fileIcon"></fa-icon>
+    <a href="/course-viewer/{{course._id}}">
+      {{course.title}}
+    </a>
+    <button class="btn btn-outline-secondary" (click)="deleteCourse(course)">
+      Delete
+    </button>
+  </li>
+</ul>
+</div>

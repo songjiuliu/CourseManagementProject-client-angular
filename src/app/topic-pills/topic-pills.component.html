@@ -1,0 +1,12 @@
+<div class="container">
+<h3>Topics</h3>
+<ul class="nav nav-pills">
+  <li class="nav-link"
+      [class]="{'active': topicId === topic._id}"
+      *ngFor="let topic of topics">
+    <a href="/course-viewer/{{courseId}}/modules/{{moduleId}}/lessons/{{lessonId}}/topics/{{topic._id}}">
+      {{topic.title}}
+    </a>
+  </li>
+</ul>
+</div>
