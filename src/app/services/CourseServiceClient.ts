@@ -6,7 +6,7 @@ export class CourseServiceClient {
     fetch('https://wbdv-generic-server.herokuapp.com/api/songjiu/courses')
       .then(response => response.json());
   findAllQuizzes= () =>
-    fetch('https://vast-cove-46550.herokuapp.com/api/quizzes')
+    fetch('http://vast-cove-46550.herokuapp.com/api/quizzes')
       .then(response => response.json());
   createCourse = async (course) =>
   {
@@ -26,7 +26,7 @@ deleteCourse = async (courseId) => {
     return await response.json()
   }
   findQuestionsForQuiz= (qid)=>
-    fetch('https://vast-cove-46550.herokuapp.com/api/quizzes/'+qid+'/questions')
+    fetch('http://vast-cove-46550.herokuapp.com/api/quizzes/'+qid+'/questions')
       .then(response => response.json());
   findCourseById = (cid) =>
     fetch('https://wbdv-generic-server.herokuapp.com/api/songjiu/courses/'+cid)
