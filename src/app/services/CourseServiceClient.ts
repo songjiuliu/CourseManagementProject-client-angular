@@ -5,6 +5,9 @@ export class CourseServiceClient {
   findAllCourses = () =>
     fetch('https://wbdv-generic-server.herokuapp.com/api/songjiu/courses')
       .then(response => response.json());
+  findAllQuizzes= () =>
+    fetch('https://vast-cove-46550.herokuapp.com/api/quizzes')
+      .then(response => response.json());
   createCourse = async (course) =>
   {
     const response = await fetch('https://wbdv-generic-server.herokuapp.com/api/songjiu/courses', {
@@ -22,6 +25,9 @@ deleteCourse = async (courseId) => {
     })
     return await response.json()
   }
+  findQuestionsForQuiz= (qid)=>
+    fetch('https://vast-cove-46550.herokuapp.com/api/quizzes/'+qid+'/questions')
+      .then(response => response.json());
   findCourseById = (cid) =>
     fetch('https://wbdv-generic-server.herokuapp.com/api/songjiu/courses/'+cid)
       .then(response => response.json());
@@ -37,5 +43,6 @@ deleteCourse = async (courseId) => {
   findTopicsForLesson= (lid) =>
     fetch('https://wbdv-generic-server.herokuapp.com/api/songjiu/lessons/'+lid+'/topics')
       .then(response => response.json());
+
 
 }

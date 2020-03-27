@@ -12,6 +12,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 
 import { TopicPillsComponent } from './topic-pills/topic-pills.component';
+import {QuizListComponent} from "./quiz-list/quiz-list.component";
+import { QuizComponent } from './quiz/quiz.component';
+import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { TopicPillsComponent } from './topic-pills/topic-pills.component';
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
-    TopicPillsComponent
+    TopicPillsComponent,
+    QuizListComponent,
+    QuizComponent,
+    TrueFalseQuestionComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     FormsModule,

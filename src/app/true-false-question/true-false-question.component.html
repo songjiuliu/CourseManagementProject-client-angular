@@ -1,0 +1,37 @@
+<div class="container">
+  <h3>True or False </h3>
+  <h4>{{question.question}}</h4>
+  <div class="form-check">
+    <input
+      id="defaultCheck1"
+      [(ngModel)]="answer"
+      type="radio"
+      value="true"
+      class="form-check-input"
+      name="{{question._id}}"/>
+    <label class="form-check-label" for="defaultCheck1">
+      Yes
+    </label>
+
+    <br/>
+  </div>
+  <div class="form-check">
+    <input
+      id="defaultCheck2"
+      [(ngModel)]="answer"
+      type="radio"
+      value="false"
+      class="form-check-input"
+      name="{{question._id}}"/>
+    <label class="form-check-label" for="defaultCheck2">
+      No
+    </label>
+
+    <br/>
+  </div>
+  Your answer: {{answer}}
+  <br/>
+  <span class="list-group-item list-group-item-primary" [hidden]="answer==''">Correct Answer:{{question.correct}}</span>
+  <span class="list-group-item list-group-item-danger" [hidden]="answer==''||answer === question.correct">Wrong answer</span>
+  <span class="list-group-item list-group-item-success" [hidden]="answer==''||answer !== question.correct">Right answer</span>
+</div>

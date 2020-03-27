@@ -10,6 +10,10 @@
     <a href="/course-viewer/{{course._id}}">
       {{course.title}}
     </a>
+    <a class="float-right"
+       href="/courses/{{course._id}}/quizzes">
+      Quizzes
+    </a>
     <button class="btn btn-outline-secondary" (click)="deleteCourse(course)">
       Delete
     </button>

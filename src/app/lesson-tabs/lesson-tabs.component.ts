@@ -16,7 +16,7 @@ export class LessonTabsComponent implements OnInit {
   lessonId = ''
   moduleId = ''
   courseId = ''
-  moduletitle='123'
+  moduletitle=''
   ngOnInit(): void {
     console.log(this.route.params)
 
