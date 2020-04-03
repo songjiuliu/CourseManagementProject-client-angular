@@ -18,4 +18,7 @@
   <span class="list-group-item list-group-item-primary" [hidden]="answer==''">Correct Answer:{{question.correct}}</span>
   <span class="list-group-item list-group-item-danger" [hidden]="answer==''||answer === question.correct">Wrong answer</span>
   <span class="list-group-item list-group-item-success" [hidden]="answer==''||answer !== question.correct">Right answer</span>
+  <button class="btn btn-info"  (click)="submitAnswer()">
+    Submit Answer
+  </button>
 </div>
